@@ -1,5 +1,3 @@
-
-````markdown
 # R.O.E. — Registro de Ocorrência Escolar / Página de apresentação 
 
 Página oficial de apresentação do sistema **R.O.E. — Registro de Ocorrência Escolar**, desenvolvida para explicar de forma visual e detalhada o funcionamento do projeto.
@@ -26,7 +24,7 @@ Esta página foi criada para **apresentar** o projeto em eventos, feiras e portf
 ---
 
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 * HTML5 — Estrutura da página
 * CSS3 — Estilização e layout
@@ -35,22 +33,7 @@ Esta página foi criada para **apresentar** o projeto em eventos, feiras e portf
 
 ---
 
-## 🤝 Contribuição
-
-Contribuições são bem-vindas!
-Você pode:
-
-1. Fazer um fork do repositório
-2. Criar uma branch com suas alterações
-3. Abrir um Pull Request com suas melhorias
-
----
-
-
 ✍ **Autora:** Taynara Correia de Souza
 📍 Escola Estadual Gustavo Peccinini — Secretaria de Educação do Estado de São Paulo
 
-```
 
-no GitHub. Quer que eu faça isso agora?
-```
