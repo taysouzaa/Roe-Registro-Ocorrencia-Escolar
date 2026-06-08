@@ -1,68 +1,67 @@
-# R.O.E. – Registro de Ocorrência Escolar
+# ROE — Registro de Ocorrência Escolar
 
-Sistema automatizado para registro, categorização e encaminhamento de ocorrências escolares (disciplinar e pedagógica), integrado com **n8n**, **Google Sheets** e **Gmail API**, permitindo também a emissão de pareceres institucionais.
+> Sistema web para digitalizar e gerenciar ocorrências escolares, com automação via n8n e integração com Google Sheets e Gmail.
 
-[![Status](https://img.shields.io/badge/status-ativo-brightgreen)]()
-[![n8n](https://img.shields.io/badge/built%20with-n8n-blue)](https://n8n.io)
-[![Google Sheets](https://img.shields.io/badge/Google-Sheets-green)]()
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+![Status](https://img.shields.io/badge/status-concluído-22c55e)
+![Frontend](https://img.shields.io/badge/frontend-HTML%2FCSS%2FJS-1f6feb)
+![Automação](https://img.shields.io/badge/automação-n8n-FF6D00)
+![License](https://img.shields.io/badge/license-MIT-green)
 
-**Demonstração online:** [Acesse aqui](https://documento-eight.vercel.app/)
+## Visão do Projeto
 
----
+O **ROE** é um sistema desenvolvido como projeto de TCC para substituir o registro manual de ocorrências escolares por um fluxo digital completo: o coordenador preenche o formulário web, os dados são salvos no Google Sheets e uma confirmação é enviada automaticamente por e-mail.
 
-## Visão Geral
+### O que o sistema resolve
 
-O **R.O.E. (Registro de Ocorrência Escolar)** é uma solução digital que moderniza o processo de registro de ocorrências em instituições de ensino.  
-Ele automatiza o fluxo de comunicação entre professores, coordenação e direção, garantindo agilidade, padronização e segurança no tratamento das informações.
+- Digitaliza o processo de registro de ocorrências, eliminando papéis.
+- Automatiza notificações por e-mail para responsáveis e equipe escolar.
+- Centraliza dados em planilha Google Sheets para consulta e histórico.
 
----
+## O Que Foi Desenvolvido
 
-## Funcionalidades
+### 1. Formulário Web de Ocorrências
+- Interface HTML/CSS/JS para preenchimento de ocorrências.
+- Validação client-side antes do envio.
+- Envio dos dados para webhook n8n.
 
-- Registro de ocorrências via formulário digital:
-  - **Disciplinar** → notificação automática à Direção.  
-  - **Pedagógico** → notificação automática à Coordenação.
-- Armazenamento estruturado em **Google Sheets**.
-- Envio de **e-mails automáticos** via **Gmail API**.
-- Registro de pareceres institucionais em planilha separada.
-- Autenticação segura via **OAuth2**.
-- Fluxo automatizado com **n8n**.
+### 2. Automação com n8n
+- Workflow n8n que recebe os dados do formulário.
+- Salva automaticamente no Google Sheets.
+- Dispara e-mail de notificação via Gmail API.
 
----
+### 3. Integrações
+- **Google Sheets:** banco de dados da aplicação.
+- **Gmail API:** envio de e-mails automáticos.
 
-## Tecnologias Utilizadas
+## Stack Técnica
 
-- **[n8n](https://n8n.io/)** → plataforma de automação de workflows.
-- **Google Sheets** → armazenamento dos registros e pareceres.
-- **Gmail API** → envio de notificações automáticas.
-- **OAuth2** → autenticação segura para APIs do Google.
-- **Vercel** → hospedagem da documentação do projeto.
+- **Frontend:** HTML5, CSS3, JavaScript (vanilla)
+- **Automação:** n8n (self-hosted ou cloud)
+- **Banco de dados:** Google Sheets
+- **Notificações:** Gmail API
 
----
+## Estrutura do Projeto
 
-## Fluxo do Sistema
+```text
+.
+├─ index.html       ← formulário principal
+├─ style.css        ← estilos
+├─ script.js        ← lógica de envio
+├─ docs/            ← workflow n8n e documentação
+└─ LICENSE
+```
 
-1. **Registro da ocorrência**  
-   O usuário escolhe o tipo (disciplinar ou pedagógico), informa dados do professor, aluno, categoria e descrição.  
+## Como Executar
 
-2. **Classificação automática**  
-   O fluxo no n8n identifica o tipo da ocorrência e define o setor responsável.  
+1. Importe o workflow n8n da pasta `docs/`.
+2. Configure as credenciais do Google Sheets e Gmail no n8n.
+3. Atualize a URL do webhook em `script.js`.
+4. Hospede os arquivos HTML em qualquer servidor estático.
 
-3. **Armazenamento**  
-   Os dados são gravados em uma planilha no Google Sheets, separados por abas/tabelas.  
+## Página de Apresentação
 
-4. **Notificação**  
-   Um e-mail automático é enviado ao setor responsável:  
-   - Direção → ocorrências disciplinares.  
-   - Coordenação → ocorrências pedagógicas.  
-
-5. **Parecer Institucional**  
-   É possível registrar pareceres via formulário, gravados em planilha própria (`Parecer.ROE`).  
-
----
+Acesse: [Registro.roe](https://github.com/taysouzaa/Registro.roe)
 
 ## Licença
 
-Este projeto é de **uso exclusivo** da autora.  
-Todos os direitos reservados © 2025 **Taynara Correia de Souza**.
+MIT — veja [LICENSE](./LICENSE)
